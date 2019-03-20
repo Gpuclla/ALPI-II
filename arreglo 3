@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void)
+{
+        int x,tabla[5];
+        int sum=0,promedio=0;
+        for (x=0;x<5;x++){
+        printf("Introduzca número:");
+        scanf("%d",&tabla[x]);
+        }
+          sum=tabla[0];
+          for (x=1;x<5;x++){
+        sum=sum+tabla[x];
+        promedio=sum; 
+        }
+        printf("Suma: %d\n",sum);
+        printf("promedio: %d\n",promedio/5);
+}

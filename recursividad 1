@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// POTENCIA POR RECURSIVIDAD
+
+int potencia(int , int );
+
+int main()
+{
+    int base; int exponente;
+    printf("Nro Base : ");
+    scanf("%d",&base);
+    printf("Nro Exponente : ");
+    scanf("%d",&exponente);
+    printf("La potencia de %d con exponente %d es:  %d " ,base, exponente, potencia(base,exponente));
+    return 0;
+}
+
+int potencia(int base, int expo){
+    if(expo == 0)
+        return 1;
+    else
+        return base*potencia(base, (expo-1));
+
+}

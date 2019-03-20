@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <conio.h>
+
+main(){
+int contador=0;
+float arreglo[5];
+for(contador=0; contador<=4; contador++){
+printf("Introduce el valor de la celda[%d]: ",contador); //Salida en pantalla
+
+scanf("%f", &arreglo[contador]); //Entrada manual
+
+}
+
+int contador2=0;
+for(contador2=0;contador2<=4;contador2++){
+printf("Valor de la celda[%d]: %.1fn",arreglo[contador2]); //Salida en pantalla.
+}
+}

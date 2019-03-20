@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    float arreglo[10];
+    int pos=0, neg=0, cero=0;
+    printf("Serie de 10 numeros \n");
+    for (int i = 0; i < 10; i++) {
+        printf("Digite numero %d : " , (i+1));
+        scanf("%f",&arreglo[i]);
+    }
+    for (int i = 0; i < 10; i++) {
+        if(arreglo[i]>0){
+            pos++;
+        }
+        else if(arreglo[i]<0){
+            neg++;
+        }else{
+            cero++;
+        }
+    }
+    printf("Nros positivos: %d\n" ,pos);
+    printf("Nros negativos: %d\n" ,neg);
+    printf("Nros ceros: %d\n" ,cero);
+}

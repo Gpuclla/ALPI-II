@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// POTENCIA POR RECURSIVIDAD
+
+int serie(int );
+
+int main()
+{
+    int pos;
+    printf("Mostrar numero de la serie Fibonacci en la posicion : ");
+    scanf("%d", &pos);
+    printf("Numero en la posicion %d : %d " , pos , serie(pos));
+}
+
+int serie(int n){
+    if((n == 1)||(n == 2))
+        return 1;
+    else
+        return (serie(n-1) + serie(n-2));
+}

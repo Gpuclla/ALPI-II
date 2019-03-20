@@ -1,0 +1,61 @@
+//EJERCICIO 1
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+double FactorialDo(int );
+double FactorialWhile(int );
+double FactorialFor(int );
+int FactorialRecursivo(int );
+
+
+int main()
+{
+    int nro;
+    printf("Ingress numerous: ");
+    scanf("%d",&nro);
+    double fact = FactorialRecursivo(   nro);
+    printf("El factorial es: %lf",fact);
+    return 0;
+}
+
+double FactorialDo(int nro){
+    double fact = 1;
+    int i=1;
+    do{
+        fact = fact * i;
+        i++;
+    }
+    while(i<=nro);
+    return fact;
+}
+
+double FactorialWhile(int nro){
+        double fact = 1;
+        int i=1;
+        while(i<=nro){
+            fact = fact * i;
+            i++;
+        }
+        return fact;
+    }
+
+
+
+double FactorialFor(int nro){
+    double fact = 1;
+    int i=1;
+    for(i=1;i<=nro;i++){
+        fact = fact * i;
+    }
+    return fact;
+}
+
+int FactorialRecursivo(int nro){
+    if(nro == 1){
+        return 1;
+    }else{
+        return FactorialRecursivo(nro - 1)*nro;
+    }
+}
